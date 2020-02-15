@@ -1,0 +1,25 @@
+﻿@model Vidly.Models.Customer
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> Customer Detail</h2>
+
+@if (Model==null)
+{
+    <h3>Invalid User ID</h3>
+}
+else
+{
+    <h3> @Model.FullName </h3>
+
+    <ul>
+        @if (Model.DOB != null)
+        {
+            <li>@Model.DOB</li>
+
+        }
+        <li>@Model.MembershipType.Name</li>
+    </ul>
+}

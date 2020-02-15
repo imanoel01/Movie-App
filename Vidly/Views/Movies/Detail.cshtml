@@ -1,0 +1,19 @@
+﻿@model Vidly.Models.Movie
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2> Movie Detail</h2>
+
+@if (Model==null)
+{
+    <h3>Invalid User Id</h3>
+}
+
+else
+	{
+	            <h3>    @Model.Title </h3>
+                <br />
+                <p>@Model.Description</p>
+	}
