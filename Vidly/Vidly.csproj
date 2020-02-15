@@ -177,8 +177,13 @@
     <Compile Include="Migrations\202002120536429_DateIssue.designer.cs">
       <DependentUpon>202002120536429_DateIssue.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002150624169_AddedGenreandMoreInformationtoMovies.cs" />
+    <Compile Include="Migrations\202002150624169_AddedGenreandMoreInformationtoMovies.designer.cs">
+      <DependentUpon>202002150624169_AddedGenreandMoreInformationtoMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\VidlyDbContext.cs" />
@@ -274,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202002120536429_DateIssue.resx">
       <DependentUpon>202002120536429_DateIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002150624169_AddedGenreandMoreInformationtoMovies.resx">
+      <DependentUpon>202002150624169_AddedGenreandMoreInformationtoMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
