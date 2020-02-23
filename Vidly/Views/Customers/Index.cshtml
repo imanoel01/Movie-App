@@ -23,6 +23,8 @@
 
 else
 {
+    @Html.ActionLink("Create New Customer", "New", "Customers", new { @class="btn btn-primary m-b-15"});
+
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
@@ -35,7 +37,7 @@ else
             {
                 <tr>
 
-                    <td>@Html.ActionLink(@customer.FullName, "Detail", "Customers", new { id = @customer.Id }, null)</td>
+                    <td>@Html.ActionLink(@customer.FullName, "Edit", "Customers", new { id = @customer.Id }, null)</td>
                     <td>@customer.MembershipType.Name</td>
                 </tr>
 
