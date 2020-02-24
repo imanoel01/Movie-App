@@ -48,9 +48,12 @@ namespace Vidly.Controllers
         public ActionResult New()
         {
             var membershipType = _context.MembershipType.ToList();
+            var gender = _context.Gender.ToList();
             var viewModel = new CustomerFormViewModel() 
             {
-            MembershipType=membershipType
+            MembershipType=membershipType,
+            Gender=gender
+            
             };
 
             return View("CustomerForm", viewModel);
@@ -75,7 +78,7 @@ namespace Vidly.Controllers
 
                 CustomerInDb.MembershipTypeId = customer.MembershipTypeId;
                 CustomerInDb.DOB = customer.DOB;
-
+                CustomerInDb.GenderId = customer.GenderId;
 
             }
             _context.SaveChanges();
@@ -90,7 +93,8 @@ namespace Vidly.Controllers
             var viewModel = new CustomerFormViewModel
             {
                 Customer = customer,
-                MembershipType = _context.MembershipType.ToList()
+                MembershipType = _context.MembershipType.ToList(),
+                Gender = _context.Gender.ToList()
             };
 
             return View("CustomerForm",viewModel);
